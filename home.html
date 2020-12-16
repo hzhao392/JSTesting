@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script> 
+    const promise1 = new Promise((resolve, reject) => {
+    //resolve after 3 seconds
+    console.log("Inside async code");
+    setTimeout(function(){ 
+        
+        resolve('Async code resolved!'); }, 3000);
+    });
+    
+    //call async code
+    promise1.then((value) => {
+    console.log(value);
+    });
+
+    console.log("Back to sync code");
+
+    let i = 0;
+    //main thread taking up exeution
+    // while (true) {
+    //     i++;
+    // }
+
+    console.log("After infinite loop");
+</script>
+
+</body>
+</html> 
